@@ -1,9 +1,16 @@
-.dashboardBody{
-    background-color: grey;
-}
+
 
 #smallLogo{
     height: 40px;
     width: 40px;
 }
 
+#dashboardHeader{
+    height: 80px !important;
+}
+
+#Side{
+    height: calc(100vh - 80px);
+    background-color: #12283f;
+    background-image: url(/assets/img/sidebar-bg.png);
+}
