@@ -1,3 +1,9 @@
 .dashboardBody{
     background-color: grey;
 }
+
+#smallLogo{
+    height: 40px;
+    width: 40px;
+}
+
