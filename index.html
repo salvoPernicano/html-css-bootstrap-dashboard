@@ -68,9 +68,9 @@
           </div>
         </div>
         <div class="div col p-0">
-          <div class="container-fluid bg-primary text-light d-flex flex-column flex-md-row-reverse justify-content-evenly align-items-md-center p-3">
+          <div class="container-fluid bg-primary text-light d-flex flex-column flex-md-row-reverse justify-content-between align-items-md-center p-2">
             <div class="newStudent d-flex align-items-center">
-              <h6 class="mb-0">Nuovo Studente</h6>
+              <span>Nuovo Studente</span>
               <i class="bi bi-plus-square text-light mx-4 fs-1"></i>
             </div>
             <div class="appPlus mt-3 order-md-1">
@@ -80,10 +80,13 @@
               </h3>
               <span class="badge rounded-pill">3 app</span>
               <i class="bi bi-chevron-double-right"></i>
-              <span class="badge rounded-pill"><i class="bi bi-plus-lg text-light"></i></span>
+              <span class="badge rounded-pill d-lg-none"><i class="bi bi-plus-lg text-light"></i></span>
+              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
+              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
+              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
             </div>
-            <div class="onlineStudents mt-3">
-              <h3 class="fs-5">Studenti online negli ultimi 30 minuti</h3>
+            <div class="onlineStudents mt-3 d-flex flex-column">
+              <span>Studenti online negli ultimi 30 minuti</span>
               <span class=" fs fw-bold">125</span>
             </div>
 
