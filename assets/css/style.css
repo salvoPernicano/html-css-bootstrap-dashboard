@@ -1,4 +1,7 @@
-
+/* body{
+    height: 100vh;
+    background-color: aqua;
+} */
 
 #smallLogo{
     height: 40px;
@@ -25,4 +28,10 @@ th svg{
     fill: white;
     background-color: #f26551;
     border-radius: 50%;
+}
+
+
+#overflowBox{
+    height: calc(100vh - 80px);
+    overflow: auto;
 }
