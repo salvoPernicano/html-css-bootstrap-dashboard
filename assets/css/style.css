@@ -19,3 +19,10 @@
     font-size: 12px !important;
     background-color: #165bba;
 }
+
+th svg{
+    padding: 5px;
+    fill: white;
+    background-color: #f26551;
+    border-radius: 50%;
+}
