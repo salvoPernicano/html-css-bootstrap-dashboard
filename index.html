@@ -14,449 +14,483 @@
 <body>
 
 
-  
 
 
-    <nav class="navbar navbar-expand-lg bg-light" id="dashboardHeader">
-      <div class="container-fluid flex-nowrap">
-        <!-- loghi -->
-        <a class="navbar-brand" href="#">
-          <img src="./assets/img/mobile-logo.png" alt="smallogo" class="d-block d-md-none" id="smallLogo">
-          <img src="./assets/img/logo.svg" alt="biglogo" class="d-none d-md-block">
-        </a>
-        <!--  search bar-->
-        <form class="d-flex w-100" role="search">
-          <div class="input-group">
-            <span class="input-group-text border-end-0 bg-body-secondary" id="basic-addon1"><i
-                class="bi bi-search"></i></span>
-            <input type="search" class="form-control border-start-0 bg-body-secondary"
-              placeholder="Prova a cercare : Lezioni di Laravel" aria-label="Search" aria-describedby="basic-search">
-          </div>
-        </form>
-        <!-- fine -->
 
-        <ul class="d-flex gap-3 my-2 my-lg-0 ">
-          <li class="nav-item d-none d-md-inline-block">
-            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-list-ul"></i></a>
-          </li>
-          <li class="nav-item d-none d-md-inline-block">
-            <a class="nav-link" href="#"><i class="bi bi-info-circle-fill"></i></a>
-          </li>
-          <li class="nav-item d-none d-md-inline-block">
-            <a class="nav-link" href="#"><i class="bi bi-three-dots-vertical text-dark"></i></a>
-          </li>
-          <li class="nav-item dropdown list-unstyled">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-bell-fill text-warning"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Profilo</a></li>
-              <li><a class="dropdown-item" href="#">Fatturazione</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
-
-    <div class="container-fluid" id="wrapper">
-      <div class="row">
-        <div
-          class="div col-1 col-lg-2 col-xxl-1 text-light d-flex flex-column justify-content-between align-items-center p-2 fs-3 flex-shrink-0 flex-grow-0"
-          id="Side">
-          <div class="icone-side d-flex flex-column gap-2">
-            <i class="bi bi-house-door-fill"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Home</span></i>
-            <i class="bi bi-bar-chart-steps"><span
-                class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Stats</span></i>
-            <i class="bi bi-reception-4"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Signal</span></i>
-          </div>
-          <div class="settings">
-            <i class="bi bi-gear-fill"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Admin</span></i>
-          </div>
-        </div>
-        <div class="col p-0 overflow-auto" id="overflowBox">
-          <div
-            class="container-fluid bg-primary text-light d-flex flex-column flex-md-row-reverse justify-content-around align-items-md-center p-2">
-            <div class="newStudent d-flex align-items-center">
-              <span>Nuovo Studente</span>
-              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus-square text-light mx-4 fs-1"></i></button></i>
-            </div>  
-            
-<!-- offcanvas from left -->
-<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-
-  <div class="offcanvas-body">
-    <form action="">
-      <div class="row">
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="Fname" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="Fname" aria-describedby="firstName">
-      </div>
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="Lname" class="form-label">Cognome</label>
-        <input type="text" class="form-control" id="Lname">
-      </div>
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="email" class="form-label">Email</label>
+  <nav class="navbar navbar-expand-lg bg-light" id="dashboardHeader">
+    <div class="container-fluid flex-nowrap">
+      <!-- loghi -->
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/mobile-logo.png" alt="smallogo" class="d-block d-md-none" id="smallLogo">
+        <img src="./assets/img/logo.svg" alt="biglogo" class="d-none d-md-block">
+      </a>
+      <!--  search bar-->
+      <form class="d-flex w-100" role="search">
         <div class="input-group">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="email" class="form-control" id="email">
+          <span class="input-group-text border-end-0 bg-body-secondary" id="basic-addon1"><i
+              class="bi bi-search"></i></span>
+          <input type="search" class="form-control border-start-0 bg-body-secondary"
+            placeholder="Prova a cercare : Lezioni di Laravel" aria-label="Search" aria-describedby="basic-search">
         </div>
-      </div>
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="email" class="form-label">Indirizzo Email</label>
-        <div class="input-group">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="email" class="form-control" id="email">
-        </div>
-      </div>
-      <div class="mb-3 col-12 col-lg-6">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div class="mb-3 col-12 col-lg-12">
-        <label for="indirizzo" class="form-label">Indirizzo</label>
-        <input type="text" class="form-control" id="indirizzo">
-      </div>
-      
-        <div class="col-12 col-lg-6 my-3">
-          <label for="floatingInputGrid">Città</label>
-          <div>
-            <input type="email" class="form-control" id="floatingInputGrid">
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 my-3">
-          <div>
-            <label for="floatingSelectGrid">Stato</label>
-            <select class="form-select" id="floatingSelectGrid">
-              <option selected>Scegli...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-12 col-lg-2 my-3">
-          <div>
-            <label for="floatingInputGrid">CAP</label>
-            <input type="email" class="form-control" id="floatingInputGrid">
-          </div>
-        </div>
+      </form>
+      <!-- fine -->
 
-        <div>
-          <label for="inputGroupFile04">Foto</label>
-          <div class="input-group">
-            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-          </div>
-        </div>
-        <div class="my-3">
-          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-          Seleziona pr proseguire
-        </div>
-        <div>
-          <input class="btn btn-primary" type="button" value="Salva">
-          <input class="btn btn-warning" type="reset" value="Svuota">
-        </div>
-    
+      <ul class="d-flex gap-3 my-2 my-lg-0 ">
+        <li class="nav-item d-none d-md-inline-block">
+          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-list-ul"></i></a>
+        </li>
+        <li class="nav-item d-none d-md-inline-block">
+          <a class="nav-link" href="#"><i class="bi bi-info-circle-fill"></i></a>
+        </li>
+        <li class="nav-item d-none d-md-inline-block">
+          <a class="nav-link" href="#"><i class="bi bi-three-dots-vertical text-dark"></i></a>
+        </li>
+        <li class="nav-item dropdown list-unstyled">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-bell-fill text-warning"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
 
-
-      </div>
-
-    </form>
-    
-    
-  </div>
-</div>
-<!-- fine off canvas -->
-
-            <div class="appPlus mt-3 order-md-1">
-              <h3>
-                Boolean
-                <span class="badge rounded-pill">Piano Blaze</span>
-              </h3>
-              <span class="badge rounded-pill">3 app</span>
-              <i class="bi bi-chevron-double-right"></i>
-              <span class="badge rounded-pill d-lg-none"><i class="bi bi-plus-lg text-light"></i></span>
-              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
-              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
-              <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
-            </div>
-            <div class="onlineStudents mt-3 d-flex flex-column">
-              <span>Studenti online negli ultimi 30 minuti</span>
-              <span class=" fs fw-bold">125</span>
-            </div>
-
-          </div>
-          <!-- fine blue section- breadcrumbs -->
-          <div class="container-fluid">
-            <div class="row flex-row">
-              <div class="colonna col-12 col-lg-7 d-flex flex-column">
-<!-- table -->
-                <div class="col p-2">
-                  <div class="card">
-                    <div class="card-header fw-bold text-capitalize">
-                      prossime classi
-                    </div>
-                    <table class="table ">
-                      <thead>
-                        <tr>
-                          <th scope="col" colspan="3">Nome</th>
-                          <th scope="col" class="d-none d-md-table-cell text-end">Data Inizio</th>
-                          <th scope="col" class="d-none d-md-table-cell text-end">ROI</th>
-                          <th scope="col" class="text-end">Stato</th>
-                          <th scope="col" class="text-end">Azioni</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 73
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 74
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 75
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-white text-bg-warning">Process</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 76
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 77
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-danger">Failed</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 78
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 79
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-danger">Failed</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                              fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                              <path
-                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg> classe 80
-                          </th>
-                              <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
-                              <td class="d-none d-md-table-cell text-end"> 20%</td>
-                              <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
-                              <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
-                                <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
-                              </td>
-                        </tr>
-                      </tbody>
-                    </table>
-      
-                    
-                    
-                    
-                    
-                    
-                    
-                  </div>
-                  
-                </div>
-  <!-- fine table -->
-  
-                <div class="col p-2">
-                  <div class="card">
-                    <div class="card-header">F.A.Q</div>
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Come aggiungere un nuovo studente?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> Son Goku è un bambino orfano molto forzuto e con la coda da scimmia che vive da solo in montagna; Bulma è invece una ragazza alla ricerca di sette mitiche sfere, note come "sfere del drago", che nel caso vengano riunite insieme hanno la capacità di evocare il supremo dio drago Shenron, il quale può esaudire un desiderio. Prima di morire, il nonno di Goku ha donato al nipote una di queste sfere, quella dotata di quattro stelle. Dopo essersi incontrati, Bulma, che ne possiede già due, propone a Goku di unirsi a lei nell'avventura, avendo difatti intenzione di utilizzare a proprio vantaggio la forza del ragazzino e inoltre prendere in prestito la sua sfera. Appena partiti, Bulma viene rapita da un gigantesco dinosauro volante, ma Goku caccia via il mostro con il suo bastone magico, che si allunga e accorcia a piacimento.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            Come posso accedere alle informazioni del mio account? 
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> Dopo essersi qualificati alle finali Goku, Crilin e Yamcha sono in attesa di sapere quali saranno i rispettivi avversari. Crilin deve scontrarsi con Bacterian, Yamcha con un misterioso vecchio, mentre Goku con Giran. Nel primo incontro Crilin viene quasi sconfitto da Bacterian (che non si è mai lavato una volta in tutta la vita e utilizza l'olezzo del proprio corpo e il fiato puzzolente in combattimento per paralizzare l'avversario), ma quando Goku gli ricorda che lui non ha il naso si riprende e sconfigge facilmente l'avversario a colpi di flatulenza.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                            Posso usare questa dashboard da mobile?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> Goku, volato nuovamente a casa di Baba, fa salire Upa sulla nuvola d'oro e insieme si dirigono ai piedi dell'obelisco di Karin per evocare il drago Shenron. Yamcha intanto chiede e ottiene da Muten di essere accettato come suo allievo. Ascoltato il desiderio dei due bambini il drago lo esaudisce; Bora si risveglia ed esce dalla tomba con Upa felice e commosso. Prima che le sfere si disperdano ancora una volta ai quattro angoli del modo Goku, con un salto riesce ad afferrare quella che rappresenta un prezioso ricordo di suo nonno, già tramutatasi in pietra. Salutati gli amici torna da Baba e qui Muten, non avendo più nulla da insegnargli gli consiglia, in attesa del prossimo torneo di fare un viaggio attorno al mondo per ampliare le proprie conoscenze.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="colonna col-12 col-lg-5 d-flex flex-column">
-                
-                              <div class="col p-2 order-0 ">
-                                <div class="card">
-                                  <div class="card-header">Todo</div>
-                                  <ul class="list-group mb-0 p-2">
-                                    <li
-                                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                      <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                                        Kick off nuove classi
-                                      </div>
-                                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                                        <i class="fas fa-times text-primary"></i>
-                                      </a>
-                                    </li>
-                                    <li
-                                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                      <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                                        Lezione su Bootstrap 5 in classe #75
-                                      </div>
-                                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                                        <i class="fas fa-times text-primary"></i>
-                                      </a>
-                                    </li>
-                                    <li
-                                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                      <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                                        Controllare Username Github studenti
-                                      </div>
-                                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                                        <i class="fas fa-times text-primary"></i>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                  
-                
-                                  
-                              </div>
-                              
-                
-                
-                              <div class="col p-2">
-                                <div class="card">
-                                  <img src="./assets/img/stats.jpeg" class="card-img-top img-fluid" alt="">
-                                  <ul class="list-group list-group-flush border-top-0">
-                                    <li class="list-group-item"><h3>Utenti attivi</h3><span>Lista degli utenti attivi in piattaforma nell ultimo mese</span></li>
-                                    <li class="list-group-item">Gennaio: 1200</li>
-                                    <li class="list-group-item">Febbraio: 800</li>
-                                    <li class="list-group-item">Marzo: 1500</li>
-                                    <li class="list-group-item"><a href="#">Visualizza report approfondito</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
+  </nav>
 
-  
+  <div class="container-fluid" id="wrapper">
+    <div class="row">
+      <div
+        class="div col-1 col-lg-2 col-xxl-1 text-light d-flex flex-column justify-content-between align-items-center p-2 fs-3 flex-shrink-0 flex-grow-0"
+        id="Side">
+        <div class="icone-side d-flex flex-column gap-2">
+          <i class="bi bi-house-door-fill"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Home</span></i>
+          <i class="bi bi-bar-chart-steps"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Stats</span></i>
+          <i class="bi bi-reception-4"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Signal</span></i>
+        </div>
+        <div class="settings">
+          <i class="bi bi-gear-fill"><span class="d-none d-lg-inline-block mx-2 fst-normal fs-5">Admin</span></i>
+        </div>
+      </div>
+      <div class="col p-0 overflow-auto" id="overflowBox">
+        <div
+          class="container-fluid bg-primary text-light d-flex flex-column flex-md-row-reverse justify-content-around align-items-md-center p-2">
+          <div class="newStudent d-flex align-items-center">
+            <span>Nuovo Studente</span>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"><i class="bi bi-plus-square text-light mx-4 fs-1"></i></button></i>
+          </div>
+
+          <!-- offcanvas from left -->
+          <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <form action="">
+                <div class="row">
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="Fname" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="Fname" aria-describedby="firstName">
+                  </div>
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="Lname" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="Lname">
+                  </div>
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                  </div>
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="email" class="form-label">Indirizzo Email</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                  </div>
+                  <div class="mb-3 col-12 col-lg-6">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 col-12 col-lg-12">
+                    <label for="indirizzo" class="form-label">Indirizzo</label>
+                    <input type="text" class="form-control" id="indirizzo">
+                  </div>
+
+                  <div class="col-12 col-lg-6 my-3">
+                    <label for="floatingInputGrid">Città</label>
+                    <div>
+                      <input type="email" class="form-control" id="floatingInputGrid">
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 my-3">
+                    <div>
+                      <label for="floatingSelectGrid">Stato</label>
+                      <select class="form-select" id="floatingSelectGrid">
+                        <option selected>Scegli...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 my-3">
+                    <div>
+                      <label for="floatingInputGrid">CAP</label>
+                      <input type="email" class="form-control" id="floatingInputGrid">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="inputGroupFile04">Foto</label>
+                    <div class="input-group">
+                      <input type="file" class="form-control" id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    </div>
+                  </div>
+                  <div class="my-3">
+                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                    Seleziona pr proseguire
+                  </div>
+                  <div>
+                    <input class="btn btn-primary" type="button" value="Salva">
+                    <input class="btn btn-warning" type="reset" value="Svuota">
+                  </div>
+
+
+
+                </div>
+
+              </form>
+
+
+            </div>
+          </div>
+          <!-- fine off canvas -->
+
+          <div class="appPlus mt-3 order-md-1">
+            <h3>
+              Boolean
+              <span class="badge rounded-pill">Piano Blaze</span>
+            </h3>
+            <span class="badge rounded-pill">3 app</span>
+            <i class="bi bi-chevron-double-right"></i>
+            <span class="badge rounded-pill d-lg-none"><i class="bi bi-plus-lg text-light"></i></span>
+            <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
+            <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
+            <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile App</span>
+          </div>
+          <div class="onlineStudents mt-3 d-flex flex-column">
+            <span>Studenti online negli ultimi 30 minuti</span>
+            <span class=" fs fw-bold">125</span>
+          </div>
+
+        </div>
+        <!-- fine blue section- breadcrumbs -->
+        <div class="container-fluid">
+          <div class="row flex-row">
+            <div class="colonna col-12 col-lg-7 d-flex flex-column">
+              <!-- table -->
+              <div class="col p-2">
+                <div class="card">
+                  <div class="card-header fw-bold text-capitalize">
+                    prossime classi
+                  </div>
+                  <table class="table ">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="3">Nome</th>
+                        <th scope="col" class="d-none d-md-table-cell text-end">Data Inizio</th>
+                        <th scope="col" class="d-none d-md-table-cell text-end">ROI</th>
+                        <th scope="col" class="text-end">Stato</th>
+                        <th scope="col" class="text-end">Azioni</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 73
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 74
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 75
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-white text-bg-warning">Process</span>
+                        </td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 76
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 77
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 78
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 79
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                            <path
+                              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                          </svg> classe 80
+                        </th>
+                        <td class="d-none d-md-table-cell text-end">12 Feb 2022</td>
+                        <td class="d-none d-md-table-cell text-end"> 20%</td>
+                        <td class="text-end"><span class="badge rounded-pill text-bg-success">Done</span></td>
+                        <td class="text-end"><i class="bi bi-pencil-fill border border-secondary p-1 mx-1"></i>
+                          <i class="bi bi-trash3-fill border border-secondary p-1 mx"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- fine table -->
+
+
+
+
+
+
+
+
+
+              <div class="col p-2">
+                <div class="card">
+                  <div class="card-header">F.A.Q</div>
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseOne">
+                          Come aggiungere un nuovo studente?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> Son Goku è un bambino orfano molto
+                          forzuto e con la coda da scimmia che vive da solo in montagna; Bulma è invece una ragazza alla
+                          ricerca di sette mitiche sfere, note come "sfere del drago", che nel caso vengano riunite
+                          insieme hanno la capacità di evocare il supremo dio drago Shenron, il quale può esaudire un
+                          desiderio. Prima di morire, il nonno di Goku ha donato al nipote una di queste sfere, quella
+                          dotata di quattro stelle. Dopo essersi incontrati, Bulma, che ne possiede già due, propone a
+                          Goku di unirsi a lei nell'avventura, avendo difatti intenzione di utilizzare a proprio
+                          vantaggio la forza del ragazzino e inoltre prendere in prestito la sua sfera. Appena partiti,
+                          Bulma viene rapita da un gigantesco dinosauro volante, ma Goku caccia via il mostro con il suo
+                          bastone magico, che si allunga e accorcia a piacimento.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                          aria-controls="panelsStayOpen-collapseTwo">
+                          Come posso accedere alle informazioni del mio account?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> Dopo essersi qualificati alle
+                          finali Goku, Crilin e Yamcha sono in attesa di sapere quali saranno i rispettivi avversari.
+                          Crilin deve scontrarsi con Bacterian, Yamcha con un misterioso vecchio, mentre Goku con Giran.
+                          Nel primo incontro Crilin viene quasi sconfitto da Bacterian (che non si è mai lavato una
+                          volta in tutta la vita e utilizza l'olezzo del proprio corpo e il fiato puzzolente in
+                          combattimento per paralizzare l'avversario), ma quando Goku gli ricorda che lui non ha il naso
+                          si riprende e sconfigge facilmente l'avversario a colpi di flatulenza.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                          aria-controls="panelsStayOpen-collapseThree">
+                          Posso usare questa dashboard da mobile?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> Goku, volato nuovamente a casa di
+                          Baba, fa salire Upa sulla nuvola d'oro e insieme si dirigono ai piedi dell'obelisco di Karin
+                          per evocare il drago Shenron. Yamcha intanto chiede e ottiene da Muten di essere accettato
+                          come suo allievo. Ascoltato il desiderio dei due bambini il drago lo esaudisce; Bora si
+                          risveglia ed esce dalla tomba con Upa felice e commosso. Prima che le sfere si disperdano
+                          ancora una volta ai quattro angoli del modo Goku, con un salto riesce ad afferrare quella che
+                          rappresenta un prezioso ricordo di suo nonno, già tramutatasi in pietra. Salutati gli amici
+                          torna da Baba e qui Muten, non avendo più nulla da insegnargli gli consiglia, in attesa del
+                          prossimo torneo di fare un viaggio attorno al mondo per ampliare le proprie conoscenze.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="colonna col-12 col-lg-5 d-flex flex-column">
+
+              <div class="col p-2 order-0 ">
+                <div class="card">
+                  <div class="card-header">Todo</div>
+                  <ul class="list-group mb-0 p-2">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Kick off nuove classi
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Lezione su Bootstrap 5 in classe #75
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Controllare Username Github studenti
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+              </div>
+
+
+
+              <div class="col p-2">
+                <div class="card">
+                  <img src="./assets/img/stats.jpeg" class="card-img-top img-fluid" alt="">
+                  <ul class="list-group list-group-flush border-top-0">
+                    <li class="list-group-item">
+                      <h3>Utenti attivi</h3><span>Lista degli utenti attivi in piattaforma nell ultimo mese</span>
+                    </li>
+                    <li class="list-group-item">Gennaio: 1200</li>
+                    <li class="list-group-item">Febbraio: 800</li>
+                    <li class="list-group-item">Marzo: 1500</li>
+                    <li class="list-group-item"><a href="#">Visualizza report approfondito</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
