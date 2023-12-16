@@ -93,66 +93,80 @@
   <div class="offcanvas-body">
     <form action="">
       <div class="row">
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="Fname" class="form-label">Nome</label>
         <input type="text" class="form-control" id="Fname" aria-describedby="firstName">
       </div>
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="Lname" class="form-label">Cognome</label>
         <input type="text" class="form-control" id="Lname">
       </div>
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="email" class="form-label">Email</label>
         <div class="input-group">
           <span class="input-group-text" id="basic-addon1">@</span>
           <input type="email" class="form-control" id="email">
         </div>
       </div>
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="email" class="form-label">Indirizzo Email</label>
         <div class="input-group">
           <span class="input-group-text" id="basic-addon1">@</span>
           <input type="email" class="form-control" id="email">
         </div>
       </div>
-      <div class="mb-3 col-6">
+      <div class="mb-3 col-12 col-lg-6">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
-      <div class="mb-3 col-12">
+      <div class="mb-3 col-12 col-lg-12">
         <label for="indirizzo" class="form-label">Indirizzo</label>
         <input type="text" class="form-control" id="indirizzo">
       </div>
-      <div class="row g-2">
-        <div class="col-6">
-          <label for="floatingInputGrid">Email address</label>
-          <div class="form">
+      
+        <div class="col-12 col-lg-6 my-3">
+          <label for="floatingInputGrid">Città</label>
+          <div>
             <input type="email" class="form-control" id="floatingInputGrid">
           </div>
         </div>
-        <div class="col-4">
-          <div class="form">
-            <label for="floatingSelectGrid">Works with selects</label>
+        <div class="col-12 col-lg-4 my-3">
+          <div>
+            <label for="floatingSelectGrid">Stato</label>
             <select class="form-select" id="floatingSelectGrid">
-              <option selected>Open this select menu</option>
+              <option selected>Scegli...</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
           </div>
         </div>
-        <div class="col-2">
-          <div class="form">
-            <label for="floatingInputGrid">Email address</label>
-            <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+        <div class="col-12 col-lg-2 my-3">
+          <div>
+            <label for="floatingInputGrid">CAP</label>
+            <input type="email" class="form-control" id="floatingInputGrid">
           </div>
         </div>
-      </div>
-      
+
+        <div>
+          <label for="inputGroupFile04">Foto</label>
+          <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          </div>
+        </div>
+        <div class="my-3">
+          <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+          Seleziona pr proseguire
+        </div>
+        <div>
+          <input class="btn btn-primary" type="button" value="Salva">
+          <input class="btn btn-warning" type="reset" value="Svuota">
+        </div>
+    
 
 
       </div>
