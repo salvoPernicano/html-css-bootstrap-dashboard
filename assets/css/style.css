@@ -39,3 +39,17 @@ th svg{
 #offcanvasRight{
     min-width: 425px;
 }
+.icone-side .bi,
+.settings .bi{
+    padding: 5px;
+    cursor: pointer;
+}
+.settings .bi:hover,
+.icone-side .bi:hover{
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+.newStudent button:hover{
+    background-color: white;
+    color: #165bba;
+}
